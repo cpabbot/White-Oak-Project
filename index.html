@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- favicon -->
+    
+    <!-- css references -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link rel="stylesheet" href="css/sun.css">
+    
+    <!-- fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Song+Myung" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento:400,700" rel="stylesheet">
+
+    <!-- favicon -->
+    <link href="/img/icons/favicon.ico" rel="icon" type="image/x-icon" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> White Oak (beta) </title>
+</head>
+<body>
+
+<main class="main">
+<div class="filter"></div>
+<img src="img/tree.svg" class="tree-background">
+<div class="nav-dots">
+	<ul>
+		<li class="current"><a href="#" onclick="scrollToPage(0)" class="dot dot--current"></a></li>
+		<li><a href="#" onclick="scrollToPage(1)" class="dot"></a></li>
+		<li><a href="#" onclick="scrollToPage(2)" class="dot"></a></li>
+		<li><a href="#" onclick="scrollToPage(3)" class="dot"></a></li>
+		<li><a href="#" onclick="scrollToPage(9)" class="dot"></a></li>
+	</ul>
+</div>
+
+    
+<section class="section welcome first" id="first">
+    <div class="sun">
+        <div class="ray_box">
+            <div class="ray ray1"></div>
+            <div class="ray ray2"></div>
+            <div class="ray ray3"></div>
+            <div class="ray ray4"></div>
+            <div class="ray ray5"></div>
+            <div class="ray ray6"></div>
+            <div class="ray ray7"></div>
+            <div class="ray ray8"></div>
+            <div class="ray ray9"></div>
+            <div class="ray ray10"></div>
+        </div>
+    </div>
+    <h1 class="title fadeUp">The White Oak Project</h1>
+    
+    <!-- adopted from Naoya https://codepen.io/nxworld/pen/OyRrGy -->
+    <div class="scroll-1__container">
+        <a href="#" class="scroll-1 scroll-1--dark" onclick="scrollDown()">
+            <div class="scroll-1__circle scroll-1__circle--dark"></div><span class="scroll-1__arrow scroll-1__arrow--dark"></span>Scroll
+        </a>
+    </div>
+<!--
+    <div class="home-menu">
+        <a type="button" class="btn home-menu__btn">About</a>
+        <a type="button" class="btn home-menu__btn">Instruction</a>
+        <a type="button" class="btn home-menu__btn">Resources</a>
+        <a type="button" class="btn home-menu__btn">Photos</a>
+    </div>
+-->
+    
+    <a class="link cloud-link" href="photos/"><div class="cloud-btn cloud-btn--left"><span class="cloud-btn__span">Photos</span></div></a>
+    <a class="link cloud-link" href="resources/"><div class="cloud-btn cloud-btn--right"><span class="cloud-btn__span">Resources</span></div></a>
+</section>
+
+
+<section class="section second" id="second">
+    <div class="section-background sb--second"></div>
+    
+    <video class="brewerton-mp4" id="brewerton-mp4">
+        <source src="img/brewerton2.mp4" type="video/mp4">
+        <source src="img/brewerton.webm" type="video/webm">
+        <source src="img/brewerton.mp4" type="video/mp4">
+<!--    Your browser does not support the video tag.-->
+    </video>
+    
+    <span class="mission-title">Our mission:</span>
+    <p class="mission mission--1">to restore the presence of white oak
+        trees in New York’s Canal Regions.</p>
+    <p class="mission mission--2">What started in the little town of Brewerton we hope to grow into a reforestation movement across New York
+    </p>
+    
+    <div class="scroll-1__container">
+        <a href="#" class="scroll-1 scroll-1--light" onclick="scrollDown()">
+            <div class="scroll-1__circle scroll-1__circle--light"></div><span class="scroll-1__arrow scroll-1__arrow--light"></span>Scroll
+        </a>
+    </div>
+    
+</section>
+    
+
+<section class="section third" id="third">
+    <div class="section-background sb--third"></div>
+    
+    <div class="medium-window">
+        <iframe src="resources/" class="frame resources-frame"></iframe>
+        <a><h1 class="subtitle">View Resources</h1></a>
+    </div>
+    
+<!--
+    <div class="about-test">
+    
+    </div>
+-->
+<!--
+    <div class="about about-1">Who we are</div>
+    <div class="about about-2">The main goal of the Canal Forest Restoration Project (CFRP) is that in three hundred years there
+will be a significant presence of White Oak trees along New York canals</div>
+-->
+    <div class="scroll-1__container">
+        <a href="#" class="scroll-1 scroll-1--dark" onclick="scrollDown()">
+            <div class="scroll-1__circle scroll-1__circle--dark"></div><span class="scroll-1__arrow scroll-1__arrow--dark"></span>Scroll
+        </a>
+    </div>
+</section>
+    
+    
+<section class="section fourth" id="fourth">
+    <div class="section-background sb--fourth"></div>
+    
+    <div class="medium-window">
+        <iframe src="photos/" class="frame photos-frame"></iframe>
+        <a><h1 class="subtitle">View Photos</h1></a>
+    </div>
+    
+    <div class="scroll-1__container">
+        <a href="#" class="scroll-1 scroll-1--light" onclick="scrollDown()">
+            <div class="scroll-1__circle scroll-1__circle--light"></div><span class="scroll-1__arrow scroll-1__arrow--light"></span>See our roots
+        </a>
+    </div>
+</section>
+    
+    
+<section class="spacer">
+    <div class="section-background sb--spacer"></div>
+</section>
+    
+    
+<section class="section last" id="fifth">
+    <div class="section-background sb--last"></div>
+    
+    <div class="team-container">
+        <div class="team">
+            <img src="img/people/georgepauk.jpeg" class="team__img">
+            <div class="team__description">
+                <div class="hr"></div>
+                <span class="team__name gradient-color">George Pauk</span>
+                <a><span class="team__info">georgep@whiteoakproject.org</span></a>
+            </div>
+        </div>
+        
+        <div class="team">
+            <img src="img/people/jenniferturnermiller.jpeg" class="team__img">
+            <div class="team__description">
+                <div class="hr"></div>
+                <span class="team__name gradient-color">Jennifer Turner-Miller</span>
+                <a><span class="team__info">jennifert@whiteoakproject.org</span></a>
+            </div>
+        </div>
+        
+        <div class="team">
+            <img src="img/people/sewardford.png" class="team__img">
+            <div class="team__description">
+                <div class="hr"></div>
+                <span class="team__name gradient-color">Seward Ford</span>
+                <a><span class="team__info">sewardf@whiteoakproject.org</span></a>
+            </div>
+        </div>
+        
+        <div class="team">
+            <img src="img/people/cameronabbot.jpeg" class="team__img">
+            <div class="team__description">
+                <div class="hr"></div>
+                <span class="team__name gradient-color">Cameron Abbot</span>
+                <a><span class="team__info">camerona@whiteoakproject.org</span></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact">
+        
+        <iframe name="contact-frame"class="contact__frame"></iframe>
+        
+        <form action="https://formspree.io/whiteoakprojectmail@gmail.com" method="POST">
+<!--            target="contact-frame" onclick="sendMail()"-->
+            <div class="flex-center contact-1">
+                <input type="text" name="name" placeholder="name" class="input input--contact contact_e">
+                <input type="email" name="email" placeholder="email" class="input input--contact contact_e">
+            </div>
+            <textarea type="text" name="message" placeholder="message" class="input input--contact contact_e"></textarea><br>
+            <input name="submit" type="image" src="img/icons/send.svg" class="contact-submit contact_e">
+        </form>
+        
+        
+        
+<!--        <input type="button" value="send email!" onclick="sendMail()" class="sendMail">-->
+<!---------------------------------------------------------------->
+<!--
+<script language="javascript">var sa_email_id = '88729-fccae';var sa_sent_text = 'Thanks for contacting us! We\'ll get back to you shortly';</script>
+<script language="javascript" src="http://s1.smartaddon.com/sa_htmlform.js"></script>
+-->
+<!--88727-962ab mail@whiteoakproject.org-->
+        
+<!--
+<div id="sa_contactdiv">
+<form name=sa_htmlform style="margin:0px" onsubmit="return sa_contactform()">
+<table>
+<tr><td>Name:<br><input type="text" name="name" /></td></tr>
+<tr><td>E-mail Address: <span style="color:#D70000">*</span><br><input type="text" name="email" required="true" /></td></tr>
+<tr><td>Message: <span style="color:#D70000">*</span><br><textarea name="message" cols="42" rows="9" required="true"></textarea></td></tr>
+<tr><td><input type="submit" value="Send Message" style="font-weight:bold"></td></tr>
+</table>
+</form>
+    
+    <div style="padding-top:10px;display:none"><a href="http://www.smartaddon.com/contact_form.html">Contact Form</a> provided by SmartAddon.com</div>
+</div>
+-->
+<!---------------------------------------------------------------->
+        
+        
+<!--
+        <form action="mailto:email@example.com" enctype="text/plain">
+            <input type="text" placeholder="name" class="input input--contact contact__name">
+            <textarea></textarea>
+            <input type="submit" value="Submit">
+        </form>
+-->
+    </div>
+    
+</section>
+    
+    
+<!--div class="credit">
+    <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    
+    
+    <span class="credit__text"><a href="http://cameronabbot.ml" class="credit__link" target="_blank">Site created by Cameron Abbot</a></span>
+</div-->
+</main>
+
+
+<!-- js, jquery references -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!--    <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>-->
+<!--    <script src="js/upload.js"></script>-->
+    <script src="js/scroll.js"></script>
+    <script src="js/home.js"></script>
+    
+    <script src="https://smtpjs.com/v2/smtp.js"></script>
+    <script src="js/mail.js"></script>
+    
+</body>
+<!-- Created by Cameron Abbot -->
+</html>

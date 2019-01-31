@@ -1,0 +1,53 @@
+body, html {
+    height: 100%;
+}
+
+.photos-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.upload-btn-container {
+    position: fixed;
+    bottom: 75px;
+    width: 100%;
+    text-align: center;
+}
+
+.upload-btn {
+    font-size: 1em;
+    color: #333;
+    background-color: #fff;
+    border: solid #333 2px;
+    padding: 15px;
+    border-radius: 10px;    
+    
+    transition: all 300ms;
+}
+
+.upload-btn:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+
+
+
+
+
+
+.upload-txt {
+    background-color: #333;
+    color: #fff;
+    width: 20px;
+    height: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+.upload-input {
+    display: none;
+}

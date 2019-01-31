@@ -1,0 +1,105 @@
+body, html {
+    height: 100%;
+}
+
+.doc {
+    background-color: #fff;
+    height: 100vh;
+    width: 48%;
+    min-width: 600px;
+    border: none;
+/*    box-shadow: 5px 10px 8px 10px #333;*/
+/*
+    position: relative;
+    float: right;
+*/
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.resources-main {
+    height: 100vh;
+    width: 52%;
+/*
+    background-color: #903910;
+    background: rgb(144,57,16);
+    background: linear-gradient(90deg, rgba(144,57,16,1) 10%, rgba(95,226,250,1) 80%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(90deg, rgba(144,57,16,1) 0%, rgba(255,255,255,1) 100%);
+*/
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+.resources-title {
+    margin: 0;
+    color: #fff;
+    font-size: 3em;
+    height: calc(100vw - 600px);
+    width: 100vh;
+    line-height: calc(100vw - 600px);
+    text-align: center;
+    position: absolute;
+    top: auto;
+    bottom: -calc(100vw - 600px);
+    transform-origin: top left;
+    transform: rotate(-90deg);
+    z-index: 2;
+}
+
+@media (min-width: 930px) {
+    .resources-title {
+        transform: none;
+        top: 45vh;
+        height: 10vh;
+        line-height: 10vh;
+        width: 80%;
+    }
+}
+
+@media (max-width: 650px) {
+    .resources-title {
+        
+    }
+}
+
+.imgR1 {
+    height: 100%;
+}
+
+/* image */
+.img-gradient-container {
+    height: 100%;
+    position: relative;
+}
+
+/* circle fade gradient */
+.img-gradient-container::before {
+    content: "";
+/*    width: 250%;*/
+    width: 1700px;
+    height: 150%;
+/*    height: 1000px;*/
+/*    clip-path: inset(0px 0px 0px 50%);*/
+    position: absolute;
+    top: -25%;
+/*    right: -20%;*/
+    right: -120px;
+    background-image: radial-gradient(circle, rgba(255,255,255,0) 30%, rgba(255, 255, 255, 1) 70%);
+    z-index: 1;
+}
+
+
+/* brown color */
+.img-gradient-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(144,57,16, 0.7);
+/*    background-image: linear-gradient(to right, rgba(144,57,16,0.4) 10%, rgba(255, 255, 255, 1) 100%);*/
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
