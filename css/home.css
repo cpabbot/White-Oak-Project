@@ -1,16 +1,9 @@
 .first {
-/*    box-shadow: inset 0px -40px 100px -10px #000;*/
     box-shadow: inset 0px -40px 200px 29px #000;
-/*    box-shadow: inset 0 0px 0px 30px #412907;*/
-/*    box-shadow: inset 0px -130px 90px -90px #000;*/
-/*    box-shadow: inset 0px -45px 175px 17px #000;*/
 }
 
 .second {
-/*    box-shadow: inset 0px 40px 100px -10px #000;*/
-/*    box-shadow: inset 0px 10px 50px -10px #000;*/
-    /*background-color: rgb(0,135,183);*/
-    background-color: #000;
+/*    background-color: #000;*/
 }
 
 .sb--second {
@@ -98,32 +91,6 @@
     }
 }
 
-.home-menu {
-    position: absolute;
-    bottom: 0;
-    height: 4vh;
-    width: 100%;
-    text-align: center;
-}
-
-.home-menu__btn {
-/*    padding: 7px 25px;*/
-/*    margin: 0 8vw;*/
-    width: calc(25vw - 3px);
-    height: 30px;
-    padding-top: 5px;
-    display: inline-block;
-    border: solid 1px #777;
-    color: #777;
-    transition: all 200ms;
-}
-
-.home-menu__btn:hover {
-/*    color: #eee;*/
-    background-color: #eee;
-    color: #555;
-}
-
 
 
 /*****************************/
@@ -139,6 +106,21 @@
 
 
 /*****************************/
+
+.dirt-background {
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    bottom: 0;
+    filter: brightness(0.7) saturate(0.7);
+}
+
+.dirt-background-cover {
+    z-index: 3;
+    height: 100px;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 150%);
+/*    box-shadow: inset 0px -40px 200px 29px #000;*/
+}
 
 .brewerton-mp4 {
     position: absolute;
@@ -232,20 +214,22 @@
 .sb--last {
     background-color: #53350A;
     background-color: #420;
-    background-color: #333a;
+    background-color: #333b;
 }
 
 .team-container {
     background-color: #2220;
     position: absolute;
     width: 100%;
-    height: calc(100vh - 330px);
-    padding: 0 80px;
+/*    height: calc(100vh - 330px);*/
+/*    height: 400px;*/
+    height: 60vh;
     
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    align-items: center;
+    align-items: end;
+    justify-content: center;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -253,16 +237,33 @@
   display: none;
 }
 
+.team-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    background-color: #222b;
+/*    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,1) 100%);*/
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 0 7px 3px #222;
+}
+
 .team {
 /*    background-color: #310;*/
 /*    background-color: #111;*/
     background-color: #fff;
 /*    background: linear-gradient(0deg, rgba(57,193,228,0.9) 0%, rgba(255,255,255,1) 80%);*/
-    background: linear-gradient(0deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 90%);
+/*    background: linear-gradient(0deg, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 90%);*/
+/*    background: linear-gradient(0deg, rgba(255,255,255,0) 5%,rgba(255,255,255,1) 10%, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 45%);*/
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0.7) 55%);
     
-    color: #444;
-    width: 40vh;
-    height: 46vh;
+    color: #555;
+    width: 275px;
+    height: 310px;
 /*    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
 /*    box-shadow: 0 0px 20px 0 rgba(255, 255, 255, 0.8);*/
     border-radius: 8px;
@@ -275,13 +276,15 @@
     position: relative;
     float: left;
     margin-left: 30px;
-    opacity: 0;
+	box-shadow: 0 0 7px 3px #444;
     
     flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
+    font-weight: 400;
 }
 
 .team__img {
@@ -290,12 +293,14 @@
     filter: brightness(0.8);
     transition: all 300ms;
     position: absolute;
-    top: 0px;
+    top: 10px;
+/*    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 1);*/
+    z-index: 999;
 }
 
 .team__description {
     position: absolute;
-    height: 55%;
+    height: 50%;
     width: 90%;
     bottom: 0;
     display: flex;
@@ -307,7 +312,7 @@
 .team__name {
     color: #777;
     position: relative;
-    font-size: 1.7em;
+    font-size: 1.3em;
     margin: 10px;
 }
 
@@ -316,24 +321,38 @@
     width: 80%;
     height: 2px;
     background-color: #777;
+    margin: 5px;
+/*    position: absolute;*/
+/*    top: 25%;*/
+}
+
+.team__info {
+    line-height: 1.55em;
+    font-size: 0.9em;
+}
+
+.contact-container {
     position: absolute;
-    top: 25%;
+    width: 100%;
+    height: 40vh;
+    bottom: 0;
+    text-align: center;
 }
 
 .contact {
-    background-color: #fff;
-    border-radius: 8px;
-    width: 70vw;
-    height: 300px;
-    position: absolute;
-    bottom: 30px;
-    left: 15vw;
-    text-align: center;
-    padding: 30px;
+	background-color: #fff;
+    display: inline-block;
+	width: 80%;
+	height: 170px;
+	position: relative;
+	top: calc(20vh - 85px);
+	text-align: center;
+	padding: 15px;
+	box-shadow: 0 0 7px 3px #444;
 }
 
-.contact-1 {
-    
+.contact__text {
+    color: #555;
 }
 
 .contact__frame {
@@ -350,22 +369,46 @@
 .input--contact {
     width: calc(45% - 10px);
     max-width: 240px;
-    padding: 10px;
+    padding: 5px;
+    margin-left: 10px;
     color: #888;
     font-size: 1em;
     display: inline-block;
-    border-radius: 5px;
-    border: solid 1px #888;
+/*    border-radius: 5px;*/
+/*    border: solid 1px #888;*/
+    border: none;
+    border-bottom: solid 1px #888;
 }
 
 textarea.input--contact {
     width: 90%;
-    max-width: 500px;
-    height: 100px;
+    max-width: 600px;
+    height: 60px;
+    border: solid 1px #888;
+    resize: none;
 }
 
 .contact-submit {
-	width: 40px;
+    position: absolute;
+	height: 50px;
+    top: calc(50% - 25px);
+    right: 10%;
+    margin: 0;
+}
+
+@media(max-width: 1200px) {
+    textarea.input--contact {
+        width: calc(90% - 200px);
+    }
+    .contact-submit {
+        
+    }
+}
+
+@media(max-width: 500px) {
+    .contact {
+        width: 100%;
+    }
 }
 
 
@@ -415,4 +458,7 @@ textarea.input--contact {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
+}
+.team__info {
+    
 }

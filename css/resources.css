@@ -2,6 +2,11 @@ body, html {
     height: 100%;
 }
 
+.header--resources {
+    position: absolute;
+    z-index: 3;
+}
+
 .doc {
     background-color: #fff;
     height: 100vh;
