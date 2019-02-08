@@ -8,15 +8,18 @@
 
 .sb--second {
     background-color: rgba(45,45,45,0.3);
+    background-color: #222b;
 }
 
 .sb--third {
     background-color: rgba(45,45,45,0.3);
 }
 
+/*
 .sb--fourth {
     background-color: rgba(0, 0, 0, 0.53);
 }
+*/
 
 /*****/
 
@@ -109,9 +112,22 @@
 
 .dirt-background {
     height: 150%;
-    width: 150%;
+    width: 400%;
     position: absolute;
     bottom: 0;
+    filter: brightness(0.7) saturate(0.7);
+}
+
+.second-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.dirt-background-2 {
+    height: 220px;
+    width: 100%;
+    position: absolute;
+    bottom: -140px;
     filter: brightness(0.7) saturate(0.7);
 }
 
@@ -245,11 +261,11 @@
     font-size: 2em;
     text-align: center;
     color: #fff;
-    background-color: #222b;
+/*    background-color: #222b;*/
 /*    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,1) 100%);*/
     padding: 20px;
     margin: 0;
-    box-shadow: 0 0 7px 3px #222;
+/*    box-shadow: 0 0 7px 3px #222;*/
 }
 
 .team {
