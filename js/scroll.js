@@ -1,6 +1,7 @@
 var main = $(".main");
 var vHeight;
 var isScrolling = false;
+var isDotScrolling = false;
 var scrollY = 0;
 var lastScrollY = 0;
 var page = 0;
@@ -52,6 +53,7 @@ function parallaxAbsolute() {
 
 function checkScroll() {
     if(!isScrolling) {
+            isScrolling = true;
             scrollY = main.scrollTop();
 //            alert(scrollY + " " + lastScrollY);
             if(scrollY > lastScrollY) { // scroll down
@@ -64,23 +66,25 @@ function checkScroll() {
 }
 
 function scrollDown() {
-    if(page == 3) { page += 6; }
-    else { page++; }
+//    if(page == 3) { page += 6; }
+//    else { page++; }
+    page ++;
 //    isScrolling = true;
     scrollToPage(page);
 }
 
 function scrollUp() {
-    if(page == 9) { page -= 6; }
-    else { page--; }
+//    if(page == 9) { page -= 6; }
+//    else { page--; }
+    page --;
 //    isScrolling = true;
     scrollToPage(page);
 }
 
 function scrollToPage(thePage) {
-    if(!isScrolling) {
+    if(!isDotScrolling) {
         page = thePage;
-        isScrolling = true; // needed for dots which calls this function directly
+        isDotScrolling = true; // needed for dots which calls this function directly
         $(".dot").removeClass("dot--current");
         var dotNum = page + 1;
         if(page == 9) { dotNum = 5 }
@@ -95,7 +99,8 @@ function scrollToPage(thePage) {
         }, 900, function() {
             pageLanded(page);
             setTimeout(function() {
-                isScrolling = false
+                isDotScrolling = false;
+                isScrolling = false;
             }, 50);
         });
         lastScrollY = newYPos;
