@@ -5,7 +5,6 @@
     
     <!-- css references -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/test.css">
     <link rel="stylesheet" href="../css/resources.css">
     
     <!-- fonts -->
@@ -30,33 +29,40 @@
         <a href="../photos/" class="nav-link">PHOTOS</a>
         &nbsp;&middot;&nbsp;
         <a href="#" class="nav-link nav-link--active">RESOURCES</a>
+        &nbsp;&middot;&nbsp;
+        <a href="../staff" class="nav-link">STAFF</a>
     </div>
 </header>
 <!---------------------------------------->
 
-<section class="resources-main">
+<section class="resources-nav-container">
     <div class="img-gradient-container">
-        <img src="../img/erie-canal1.jpg" class="imgR1">
+        <img src="../img/erie-canal.jpg" class="imgR1">
     </div>
-    <h1 class="resources-title">Resources</h1>
+    <div class="resources-nav">
+        <ul class="resources-nav__ul">
+            <li class="resources-nav__item"><a href="https://docs.google.com/document/d/e/2PACX-1vSTR82HnKXHFJVus5PwjkWaNkISefbzUMhnblO2rErJVcKiJOAFVW4jfcij4nYBLJQtDBV82fKYnExu/pub?embedded=true" target="resources-frame" class="resources-nav__link rnl-active">
+                Mission Statement</a></li>
+            <li class="resources-nav__item"><a href="https://docs.google.com/document/d/e/2PACX-1vTNYkGvunl9upSzSv5CUFhK4EmKVrfB9Q-lYXjb88yhSZrbBZaL0re-gCidtIdGD-De8U0OlSOaA8xu/pub?embedded=true" target="resources-frame" class="resources-nav__link">
+                Project Status Reports</a></li>
+            <li class="resources-nav__item"><a href="https://docs.google.com/document/d/e/2PACX-1vTy1Tx4vSKa9gHTLHXDfSzXj02qCttEuyfIhakPgFkVlqEgvAJAadnowjbByyyex9ZEtv2qRYtHrYfi/pub?embedded=true" target="resources-frame" class="resources-nav__link">
+                Planting Information</a></li>
+            <li class="resources-nav__item"><a href="https://docs.google.com/document/d/e/2PACX-1vS6inLvnCJei0O1Ur1wVAsS7ORHFgkSPiQ8hpHao0upcebdAvaV5LZ0GvuNvi-Pm3wSw0e1DsqGl3h1/pub?embedded=true" target="resources-frame" class="resources-nav__link">
+                Collect Acorns</a></li>
+        </ul>
+    </div>
 </section>
 
-<iframe class="doc" src="https://docs.google.com/document/d/e/2PACX-1vSTR82HnKXHFJVus5PwjkWaNkISefbzUMhnblO2rErJVcKiJOAFVW4jfcij4nYBLJQtDBV82fKYnExu/pub?embedded=true"></iframe>
+<iframe name="resources-frame" class="resources-frame" src="https://docs.google.com/document/d/e/2PACX-1vSTR82HnKXHFJVus5PwjkWaNkISefbzUMhnblO2rErJVcKiJOAFVW4jfcij4nYBLJQtDBV82fKYnExu/pub?embedded=true"></iframe>
 
 
-    
-<!--
-<div class="pdf-viewer">
-    <object data="../files/cfrp-mission.pdf" type="application/pdf" width="100%" height="100%" class="pdf">
-        Your browser doesn't support this pdf viewer. Click the link below to view!
-        <a href="../files/cfrp-mission.pdf">Our Mission</a>
-    </object>
-</div>
--->
-
-
-<!-- js, jquery references -->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>-->
+<!-- javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+    $('.resources-nav__link').click( function() {
+        $(this).addClass('rnl-active').parents().siblings().children().removeClass('rnl-active');
+    });
+</script>
     
 </body>
 <!-- Created by Cameron Abbot -->

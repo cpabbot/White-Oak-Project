@@ -7,34 +7,69 @@ body, html {
     z-index: 3;
 }
 
-.doc {
+.resources-nav-container {
+    height: 100vh;
+    width: 52%;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: right; /* gradient needs to be right side showing */
+}
+
+.resources-nav {
+    width: 100%;
+    z-index: 1;
+    color: #fff;
+    padding-left: 5vw;
+/*    border: solid 2px #333;*/
+}
+
+.resources-nav__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+.resources-nav__ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.resources-nav__item {
+    margin: 5px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.resources-nav__link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ccc;
+    transition: all 150ms;
+}
+.resources-nav__link:hover {
+    color: #fff;
+}
+
+.rnl-active {
+    color: #fff;
+    font-size: 2.4rem;
+}
+
+.resources-frame {
     background-color: #fff;
     height: 100vh;
     width: 48%;
     min-width: 600px;
     border: none;
-/*    box-shadow: 5px 10px 8px 10px #333;*/
-/*
-    position: relative;
-    float: right;
-*/
     position: absolute;
     right: 0;
     z-index: 2;
-}
-
-.resources-main {
-    height: 100vh;
-    width: 52%;
-/*
-    background-color: #903910;
-    background: rgb(144,57,16);
-    background: linear-gradient(90deg, rgba(144,57,16,1) 10%, rgba(95,226,250,1) 80%, rgba(255,255,255,1) 100%);
-    background: linear-gradient(90deg, rgba(144,57,16,1) 0%, rgba(255,255,255,1) 100%);
-*/
-    position: relative;
-    float: left;
-    overflow: hidden;
 }
 
 .resources-title {
@@ -62,39 +97,32 @@ body, html {
         width: 80%;
     }
 }
-
 @media (max-width: 650px) {
     .resources-title {
         
     }
 }
 
-.imgR1 {
-    height: 100%;
-}
+.imgR1 { height: 100%; }
 
 /* image */
 .img-gradient-container {
     height: 100%;
-    position: relative;
+    width: 100%;
+    position: absolute;
 }
 
 /* circle fade gradient */
 .img-gradient-container::before {
     content: "";
-/*    width: 250%;*/
     width: 1700px;
     height: 150%;
-/*    height: 1000px;*/
-/*    clip-path: inset(0px 0px 0px 50%);*/
     position: absolute;
     top: -25%;
-/*    right: -20%;*/
     right: -120px;
     background-image: radial-gradient(circle, rgba(255,255,255,0) 30%, rgba(255, 255, 255, 1) 70%);
     z-index: 1;
 }
-
 
 /* brown color */
 .img-gradient-container::after {
@@ -102,7 +130,6 @@ body, html {
     display: block;
     position: absolute;
     background-color: rgba(144,57,16, 0.7);
-/*    background-image: linear-gradient(to right, rgba(144,57,16,0.4) 10%, rgba(255, 255, 255, 1) 100%);*/
     left: 0;
     top: 0;
     height: 100%;

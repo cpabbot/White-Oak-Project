@@ -1,0 +1,127 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url(../img/sky%20gradient.svg);
+    background-attachment: fixed;
+}
+
+.header--resources {
+    background-color: #311c06;
+    box-shadow: 0 2px 10px 2px #311c06;
+    z-index: 1;
+}
+
+.header--resources .nav-link {
+    color: #fff;
+}
+
+.header--resources .nav-link:hover {
+    color: #bbb;
+}
+
+.tree-background {
+    opacity: 40%;
+    position: fixed;
+    top: 0;
+    right: -60%;
+    width: 2300px;
+    overflow: hidden;
+}
+
+.team-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    min-height: 50vh;
+    padding: 0 2vw;
+    position: relative;
+    top: 20px;
+}
+
+.team-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+/*    background-color: #311c06cc;*/
+    padding: 20px;
+    margin: 0;
+}
+
+.team {
+    background-color: #fff;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0.7) 55%);
+    
+    color: #555;
+    width: 275px;
+    height: 310px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    
+    position: relative;
+    float: left;
+/*    margin: 30px;*/
+    margin-bottom: 15px;
+	box-shadow: 0 0 7px 3px #444;
+    
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    font-weight: 400;
+}
+
+.team__img {
+    width: 60%;
+    border-radius: 50%;
+    filter: brightness(0.8);
+    transition: all 300ms;
+    position: absolute;
+    top: 10px;
+/*    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 1);*/
+    z-index: 999;
+}
+
+.team__description {
+    position: absolute;
+    height: 50%;
+    width: 90%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.team__name {
+    color: #777;
+    position: relative;
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+.hr {
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: #777;
+    margin: 5px;
+}
+
+.team__info {
+    line-height: 1.55em;
+    font-size: 0.9em;
+}
