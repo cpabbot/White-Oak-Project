@@ -40,6 +40,7 @@
         <img src="../img/erie-canal.jpg" class="imgR1">
     </div>
     <div class="resources-nav">
+        <h3 class="resources-nav__mobile-header">Resource Selector <span style="font-size:0.8em">&#x25BC;</span></h3>
         <ul class="resources-nav__ul">
             <li class="resources-nav__item"><a href="https://docs.google.com/document/d/e/2PACX-1vSTR82HnKXHFJVus5PwjkWaNkISefbzUMhnblO2rErJVcKiJOAFVW4jfcij4nYBLJQtDBV82fKYnExu/pub?embedded=true" target="resources-frame" class="resources-nav__link rnl-active">
                 Mission Statement</a></li>
@@ -61,6 +62,11 @@
 <script>
     $('.resources-nav__link').click( function() {
         $(this).addClass('rnl-active').parents().siblings().children().removeClass('rnl-active');
+        $('.resources-nav__ul').removeClass("visible-block");
+    });
+    
+    $('.resources-nav__mobile-header').click( function() {
+        $('.resources-nav__ul').toggleClass("visible-block");
     });
 </script>
     
