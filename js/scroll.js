@@ -8,13 +8,13 @@ var page = 0;
 var sunY = $(".sun").offset().top;
 var cloudLeftY = $(".cloud-btn--left").offset().top;
 var cloudRightY = $(".cloud-btn--right").offset().top;
-var video = document.getElementById('brewerton-mp4');
+//var video = document.getElementById('brewerton-mp4'); #novideo
 var videoPage = 1;
 
 $(document).ready(function() {
     
     vHeight = $(".second").offset().top;
-    video.load();
+//    video.load(); #novideo
     
     var scrollIntervalID = setInterval(animate, 10);
     
@@ -112,21 +112,23 @@ function getDist() {
 }
 
 function pageLanded(page) {
-    if(page == videoPage-1) {
-        resetVideo();
-        setTimeout(function() {
-            $(".about-1").addClass("fadeUp");
-        }, 0);
-        setTimeout(function() {
-            $(".about-2").addClass("fadeUp");
-        }, 1000);
-    }
-    if(page == videoPage+1) {
-        resetVideo();
-    }
+//    if(page == videoPage-1) {
+//        resetVideo(); #novideo
+//        setTimeout(function() {
+//            $(".about-1").addClass("fadeUp");
+//        }, 0);
+//        setTimeout(function() {
+//            $(".about-2").addClass("fadeUp");
+//        }, 1000);
+//    }
+//    if(page == videoPage+1) { #novideo
+//        resetVideo();
+//    }
     if(page == 1) {
         $(".mission-title").addClass("fadeIn");
-        setTimeout(function() { $(".mission").addClass("fadeIn"); }, 700);
+        $(".mission--1").addClass("fadeIn");
+        setTimeout(function() { $(".mission-goals").addClass("fadeIn"); }, 700);
+        setTimeout(function() { $(".mission-link").addClass("fadeIn"); }, 1400);
     }
     if(page == 9) {
         $(".team").addClass("fadeIn");

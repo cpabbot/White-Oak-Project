@@ -1,5 +1,11 @@
 /*adopted from Naoya https://codepen.io/nxworld/pen/OyRrGy*/
 
+@media(max-width: 800px) {
+    .scroll__text {
+        display: none;
+    }
+}
+
 /** for centering the scroll down button **/
 .scroll-1__container {
     position: absolute;
@@ -50,14 +56,14 @@
 }
 
 /* desktop only: scroll down button animation */
-@media (min-width: 500px) {
+@media (min-width: 800px) {
     .scroll-1__circle:hover {
         border-radius: 2px;
         transform: rotate(135deg);
     /*    transition: transform 0.8s, border-radius 0.5s;*/
     }
     .scroll-1__container {
-        bottom: 0;
+        bottom: -8px;
     }
     .scroll-1--dark {
         color: #333;

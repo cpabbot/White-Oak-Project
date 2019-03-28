@@ -17,7 +17,13 @@
     <link href="https://fonts.googleapis.com/css?family=Quattrocento:400,700" rel="stylesheet">
 
     <!-- favicon -->
-    <link href="/img/icons/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/icons/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> White Oak Project </title>
@@ -71,19 +77,25 @@
 <!--    <img src="img/dirt.png" class="dirt-background">-->
 <!--    <div class="section-background dirt-background-cover"></div>-->
     
-    <video class="brewerton-mp4" id="brewerton-mp4">
-        <source src="img/brewerton.mp4" type="video/mp4">
-    </video>
+<!--    <video class="brewerton-mp4" id="brewerton-mp4">-->
+<!--        <source src="img/brewerton.mp4" type="video/mp4">-->
+<!--    </video>-->
     
     <span class="mission-title">Our mission:</span>
-    <p class="mission mission--1">to restore the presence of white oak
-        trees in New York's Canal Regions.</p>
-    <p class="mission mission--2">What started in the little town of Brewerton we hope to grow into a reforestation movement across New York
-    </p>
+    <p class="mission mission--1"><i>to restore the presence of white oak and white pine trees in New York State's Canal Regions</i></p>
+    <ol class="mission mission-goals">
+        <li>To replenish the region with a future of white oak and white pine trees of ecological proportion and cultural significance</li>
+        
+        <li>To foster strong awareness and appreciation of the unique characteristics and indispensable value of white oaks and white pines among residents and visitors of the canal region</li>
+        
+        <li>To collect seeds, produce seedlings for plantings, and engage the support and collaboration of individuals and organizations in the canal region</li>
+    </ol>
+    
+    <a href="resources/" class="link mission-link"><i>See our full mission statement</i></a>
     
     <div class="scroll-1__container">
         <a href="#" class="scroll-1 scroll-1--light" onclick="scrollDown()">
-            <div class="scroll-1__circle scroll-1__circle--light"></div><span class="scroll-1__arrow scroll-1__arrow--light"></span>Scroll
+            <div class="scroll-1__circle scroll-1__circle--light"></div><span class="scroll-1__arrow scroll-1__arrow--light"></span><span class="scroll__text">Scroll</span>
         </a>
     </div>
     
@@ -94,49 +106,16 @@
 <section class="section third" id="third">
     <div class="section-background sb--third"></div>
     
-    <div class="team-container">
-        
-<!--        <h2 class="team-title">Meet the Team</h2>-->
-        
-        <div class="team">
-            <img src="img/people/georgepauk.jpeg" class="team__img">
-            <div class="team__description">
-                <div class="hr"></div>
-                <span class="team__name gradient-color">George Pauk</span>
-                <span class="team__info">Project Director</span>
-                <a><span class="team__info">georgep@whiteoakproject.org</span></a>
-            </div>
-        </div>
-        
-        <div class="team">
-            <img src="img/people/jenniferturnermiller.jpeg" class="team__img">
-            <div class="team__description">
-                <div class="hr"></div>
-                <span class="team__name gradient-color">Jennifer Turner-Miller</span>
-                <span class="team__info">Project Coordinator</span>
-                <a><span class="team__info">jennifert@whiteoakproject.org</span></a>
-            </div>
-        </div>
-        
-        <div class="team">
-            <img src="img/people/sewardford.png" class="team__img">
-            <div class="team__description">
-                <div class="hr"></div>
-                <span class="team__name gradient-color">Seward Ford</span>
-                <span class="team__info">Project Advisor</span>
-                <a><span class="team__info">sewardf@whiteoakproject.org</span></a>
-            </div>
-        </div>
-        
-        <div class="team">
-            <img src="img/people/cameronabbot.jpeg" class="team__img">
-            <div class="team__description">
-                <div class="hr"></div>
-                <span class="team__name gradient-color">Cameron Abbot</span>
-                <span class="team__info">Web Developer</span>
-                <a><span class="team__info">camerona@whiteoakproject.org</span></a>
-            </div>
-        </div>
+    <div class="home-nav">
+        <a class="home-nav-link" href="photos/"><div class="home-nav-item">
+            <h2 class="home-nav-item__title">Photos</h2>
+        </div></a>
+        <a class="home-nav-link" href="resources/"><div class="home-nav-item">
+            <h2 class="home-nav-item__title">Resources</h2>
+        </div></a>
+        <a class="home-nav-link" href="Team/"><div class="home-nav-item">
+            <h2 class="home-nav-item__title">Team</h2>
+        </div></a>
     </div>
     
     <div class="contact-container">
@@ -147,8 +126,10 @@
                 <input type="text" name="name" placeholder="name" class="input input--contact contact_e">
                 <input type="email" name="email" placeholder="email" class="input input--contact contact_e">
             </div>
-            <textarea type="text" name="message" placeholder="message" class="input input--contact contact_e"></textarea><br>
-            <input name="submit" type="image" src="img/icons/send.svg" alt="send" class="contact-submit contact_e" value="send">
+            <div class="flex-center">
+                <textarea type="text" name="message" placeholder="message" class="input input--contact contact_e"></textarea>
+                <input name="submit" type="image" src="img/icons/send.svg" alt="send" class="contact-submit contact_e" value="send">
+            </div>
         </form>
     </div>
     </div>
