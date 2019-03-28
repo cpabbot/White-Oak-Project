@@ -67,7 +67,7 @@ body {
 
 @media(min-width: 800px) {
     .nav-dots {
-        display: visible;
+        display: block;
     }
 }
 
