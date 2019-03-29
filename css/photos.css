@@ -10,6 +10,43 @@ body, html {
     top: 100px;
 }
 
+.snapwidget-small {
+    display: block;
+}
+.snapwidget-medium {
+    display: none;
+}
+.snapwidget-large {
+    display: none;
+}
+
+@media(min-width: 500px) {
+    .snapwidget-small {
+        display: none;
+    }
+    .snapwidget-medium {
+        display: block;
+    }
+    .snapwidget-large {
+        display: none;
+    }
+}
+
+@media(min-width: 900px) {
+    .snapwidget-small {
+        display: none;
+    }
+    .snapwidget-medium {
+        display: none;
+    }
+    .snapwidget-large {
+        display: block;
+    }
+}
+
+
+
+
 .upload-btn-container {
     position: fixed;
     bottom: 75px;
@@ -32,12 +69,6 @@ body, html {
     color: #fff;
     background-color: #333;
 }
-
-
-
-
-
-
 
 .upload-txt {
     background-color: #333;
