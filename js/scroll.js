@@ -13,7 +13,8 @@ var videoPage = 1;
 
 $(document).ready(function() {
     
-    vHeight = $(".second").offset().top;
+//    vHeight = $(".second").offset().top;
+     vHeight = $(window).height();
 //    video.load(); #novideo
     
     var scrollIntervalID = setInterval(animate, 10);
@@ -28,7 +29,6 @@ $(document).ready(function() {
 
 $(window).on('resize', function() {
      vHeight = $(window).height();
-//    alert("resize " + vHeight);
 });
 
 function animate() {
@@ -45,14 +45,14 @@ function parallaxFixed($el, amount, offset) {
     $el.css('top', newPos);
 }
 
-function parallaxAbsolute() {
-//    var yPos = $(".main").scrollTop();
-//    var newPos = yPos*0.8;
-//    $el.css('top', newPos);
-}
+/*function parallaxAbsolute() {
+    var yPos = $(".main").scrollTop();
+    var newPos = yPos*0.8;
+    $el.css('top', newPos);
+}*/
 
 function checkScroll() {
-    if(!isScrolling) {
+    if(!isScrolling && !isDotScrolling) {
             isScrolling = true;
             scrollY = main.scrollTop();
 //            alert(scrollY + " " + lastScrollY);
@@ -66,18 +66,12 @@ function checkScroll() {
 }
 
 function scrollDown() {
-//    if(page == 3) { page += 6; }
-//    else { page++; }
-    page ++;
-//    isScrolling = true;
+    page++;
     scrollToPage(page);
 }
 
 function scrollUp() {
-//    if(page == 9) { page -= 6; }
-//    else { page--; }
-    page --;
-//    isScrolling = true;
+    page--;
     scrollToPage(page);
 }
 
@@ -87,12 +81,11 @@ function scrollToPage(thePage) {
         isDotScrolling = true; // needed for dots which calls this function directly
         $(".dot").removeClass("dot--current");
         var dotNum = page + 1;
-        if(page == 9) { dotNum = 5 }
         $(".nav-dots ul li:nth-child(" + dotNum + ") .dot").addClass("dot--current");
 
         var newYPos = Math.round(vHeight * page);
     //    alert(main.scrollTop() + "  to   " + newYPos + " (" + page + ")");
-        prepareBrewertonAnimation();
+//        prepareBrewertonAnimation();
 
         main.animate({
             scrollTop: newYPos

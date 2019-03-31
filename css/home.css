@@ -399,3 +399,274 @@ textarea.input--contact {
 .team__info {
     
 }
+
+
+
+
+
+
+
+/***************** SCROLL ARROWS on Home Page *********************/
+/*adopted from Naoya https://codepen.io/nxworld/pen/OyRrGy*/
+@media(max-width: 800px) {
+    .scroll__text {
+        display: none;
+    }
+}
+
+/** for centering the scroll down button **/
+.scroll-1__container {
+    position: absolute;
+    bottom: -30px; /* make this negative to lower the button */
+    height: 0px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+/** the clickable region **/
+.scroll-1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(-25px, -50%);
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    padding-top: 60px;
+    /* mobile: hidden "scroll" */
+    color: rgba(0,0,0,0);
+}
+
+/** circle **/
+.scroll-1__circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 1.3px solid #333;
+    border-radius: 100%;
+    box-sizing: border-box;
+    transition: border-radius 0.8s, transform 0.8s;
+    z-index: 1;
+    transform: rotate(0deg);
+/*    transform: rotate(135deg);*/
+}
+.scroll-1__circle--dark {
+    border-color: #333;
+}
+.scroll-1__circle--light {
+    border-color: #fff;
+}
+
+/* desktop only: scroll down button animation */
+@media (min-width: 800px) {
+    .scroll-1__container {
+        display: block;
+        bottom: -8px;
+    }
+    .scroll-1__circle:hover {
+        border-radius: 2px;
+        transform: rotate(135deg);
+    /*    transition: transform 0.8s, border-radius 0.5s;*/
+    }
+    .scroll-1--dark {
+        color: #333;
+    }
+    .scroll-1--light {
+        color: #fff;    
+    }
+}
+
+/** the circle part, replaced by other div in order to allow rotation **/
+.scroll-1__arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+/*  border: 1.3px solid #333;*/
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+/** arrow **/
+.scroll-1__arrow::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1.3px solid #333;
+  border-bottom: 1.3px solid #333;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+.scroll-1__arrow--dark::after {
+    border-color: #333;
+}
+.scroll-1__arrow--light::after {
+    border-color: #fff;
+}
+
+/** pulsing animation **/
+.scroll-1__arrow::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(30,30,30,0.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 4s infinite;
+  animation: sdb03 4s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(30,30,30,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+/****************** CLOUDS on Home Page *******************/
+.cloud-link {
+    color: #555;
+}
+.cloud-btn {
+/*    box-shadow: 0px 2px 100px 3px #333;*/
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: background-color 100ms linear, height 70ms ease-in, width 70ms ease-in;
+  cursor: pointer;
+    transition: all 400ms;
+/*    opacity: 0;*/
+}
+.cloud-btn:hover {
+    background-color: #777;
+    color: white;
+}
+.cloud-btn::before, .cloud-btn::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 23.75px;
+  background-color: inherit;
+  border-radius: inherit;
+}
+.cloud-btn::before {
+  left: -100%;
+  margin-left: calc( ( 190px / 2)   );
+}
+.cloud-btn::after {
+  right: -100%;
+  margin-right: calc( ( 190px / 2)   );
+}
+.cloud-btn:active {
+  background-color: #ECE9E6;
+}
+.cloud-btn__span {
+  position: absolute;
+  z-index: 3;
+  width: 200%;
+  left: -50%;
+  text-align: center;
+  top: 50%;
+  margin-top: -0.5em;
+  font-size: 2.3em;
+}
+
+.cloud-btn--left {
+    top: 15vh;
+    left: 40vw;
+/*    animation-delay: 1.1s;*/
+}
+
+.cloud-btn--right {
+    top: 10vh;
+/*    left: 70vw;*/
+    right: 15vw;
+    width: 175px;
+/*    animation-delay: 1.3s;*/
+}
+
+@media (max-width: 1050px) {
+    .cloud-btn--left {
+        left: 30vw;
+    }
+    .cloud-btn--right {
+        top: 25vh;
+    }
+    .cloud-btn__span {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .cloud-btn {
+        width: 110px;
+        height: 110px;
+    }
+    .cloud-btn::before, .cloud-btn::after {
+        width: 90px;
+        height: 90px;
+    }
+    .cloud-btn::before {
+      margin-left: calc( ( 110px / 2)   );
+    }
+    .cloud-btn::after {
+      margin-right: calc( ( 110px / 2)   );
+    }
+    .cloud-btn--left {
+        top: 28vh;
+    }.cloud-btn--right {
+        top: 8vh;
+        right: 15vw;
+    }
+}
